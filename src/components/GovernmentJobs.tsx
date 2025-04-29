@@ -15,7 +15,7 @@ const jobVacancies = [
     institution: "Punjab Agriculture Department",
     description: "Applications are invited for the post of Agriculture Officer. Candidates with M.Sc. in Agriculture are eligible to apply.",
     link: "/vacancies/punjab-ao-2025",
-    type: "vacancy",
+    type: "vacancy" as const,  // Type assertion to make TypeScript aware this is a literal type
     deadline: "May 15, 2025"
   },
   {
@@ -25,7 +25,7 @@ const jobVacancies = [
     institution: "ICAR-Indian Agricultural Research Institute",
     description: "Applications are invited for JRF positions in the Division of Agronomy under the research project.",
     link: "/vacancies/iari-jrf-2025",
-    type: "vacancy",
+    type: "vacancy" as const,  // Type assertion to make TypeScript aware this is a literal type
     deadline: "May 5, 2025"
   },
   {
@@ -35,7 +35,7 @@ const jobVacancies = [
     institution: "KVK-Rajasthan",
     description: "Applications are invited for Subject Matter Specialist in Soil Science, Agronomy and Plant Protection.",
     link: "/vacancies/kvk-sms-2025",
-    type: "vacancy",
+    type: "vacancy" as const,  // Type assertion to make TypeScript aware this is a literal type
     deadline: "April 30, 2025"
   }
 ];
