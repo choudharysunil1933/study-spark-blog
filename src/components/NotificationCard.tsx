@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import { Bell, ExternalLink, Calendar } from 'lucide-react';
+import { Bell, ExternalLink, Calendar, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
