@@ -1,10 +1,11 @@
 
 import React from 'react';
-import { Briefcase, ArrowRight } from 'lucide-react';
+import { Briefcase, ArrowRight, Share2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import NotificationCard from './NotificationCard';
+import { Whatsapp, Telegram } from 'lucide-react';
 
 // Sample job vacancies
 const jobVacancies = [
@@ -41,6 +42,18 @@ const jobVacancies = [
 ];
 
 const GovernmentJobs = () => {
+  // Function to share via WhatsApp
+  const shareViaWhatsApp = (title, link) => {
+    const text = `Check out this job vacancy: ${title} - ${window.location.origin}${link}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+  };
+
+  // Function to share via Telegram
+  const shareViaTelegram = (title, link) => {
+    const text = `Check out this job vacancy: ${title} - ${window.location.origin}${link}`;
+    window.open(`https://t.me/share/url?url=${encodeURIComponent(window.location.origin + link)}&text=${encodeURIComponent(title)}`, '_blank');
+  };
+
   return (
     <div className="py-8 bg-white">
       <div className="container mx-auto px-4">
@@ -69,6 +82,31 @@ const GovernmentJobs = () => {
                 type={vacancy.type}
                 deadline={vacancy.deadline}
               />
+              <div className="mt-2 flex justify-end space-x-2">
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="text-green-600 hover:text-green-700 hover:bg-green-50"
+                  onClick={() => shareViaWhatsApp(vacancy.title, vacancy.link)}
+                >
+                  <Whatsapp className="h-5 w-5" />
+                </Button>
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="text-blue-500 hover:text-blue-600 hover:bg-blue-50"
+                  onClick={() => shareViaTelegram(vacancy.title, vacancy.link)}
+                >
+                  <Telegram className="h-5 w-5" />
+                </Button>
+                <Button 
+                  variant="ghost" 
+                  size="icon"
+                  className="text-gray-500 hover:text-gray-700 hover:bg-gray-50"
+                >
+                  <Share2 className="h-5 w-5" />
+                </Button>
+              </div>
             </div>
           ))}
         </div>

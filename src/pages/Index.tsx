@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
@@ -166,7 +165,7 @@ const recentNotes = [
     publishedDate: "September 12, 2023",
     readTime: "20 min",
     featured: false,
-    image: "https://images.unsplash.com/photo-1549483425-1907726c9127?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "recent2",
@@ -181,7 +180,7 @@ const recentNotes = [
     publishedDate: "September 2, 2023",
     readTime: "18 min",
     featured: false,
-    image: "https://images.unsplash.com/photo-1518568814465-f3552d8e2728?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1625246333195-78d73c0ae829?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "recent3",
@@ -458,6 +457,15 @@ const Index = () => {
       </main>
       
       <Footer />
+      
+      {/* Editor Attribution */}
+      <section className="py-6 bg-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm text-gray-600">
+            Edited by: <span className="font-semibold">Sunil Nodal</span>
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
