@@ -40,18 +40,32 @@ const NotificationCard: React.FC<NotificationCardProps> = ({
   const getTypeLabel = () => {
     switch (type) {
       case 'exam':
-        return <span className="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded">Exam</span>;
+        return <span className="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded-full">Exam</span>;
       case 'vacancy':
-        return <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">Vacancy</span>;
+        return <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">Vacancy</span>;
       case 'update':
-        return <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Update</span>;
+        return <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">Update</span>;
       default:
         return null;
     }
   };
 
+  // Determine the border color based on the notification type
+  const getBorderColor = () => {
+    switch (type) {
+      case 'exam':
+        return 'border-l-amber-500';
+      case 'vacancy':
+        return 'border-l-blue-500';
+      case 'update':
+        return 'border-l-green-500';
+      default:
+        return 'border-l-primary';
+    }
+  };
+
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-md border-l-4 border-l-primary">
+    <Card className={`overflow-hidden transition-all duration-300 hover:shadow-md border-l-4 ${getBorderColor()} hover:-translate-y-1`}>
       <div className="p-5">
         <div className="flex justify-between items-start mb-3">
           <div className="flex items-center">
@@ -82,7 +96,7 @@ const NotificationCard: React.FC<NotificationCardProps> = ({
           )}
         </div>
         
-        <Button variant="outline" asChild size="sm" className="w-full mt-2">
+        <Button variant="outline" asChild size="sm" className="w-full mt-2 hover:bg-primary/5 border-primary/50 text-primary">
           <a href={link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
             View Details
             <ExternalLink className="h-3.5 w-3.5 ml-2" />

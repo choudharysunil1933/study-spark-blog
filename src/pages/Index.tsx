@@ -7,6 +7,9 @@ import FeaturedMaterial from '@/components/FeaturedMaterial';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Bookmark, Share2 } from 'lucide-react';
+import ScrollingNotifications from '@/components/ScrollingNotifications';
+import GovernmentJobs from '@/components/GovernmentJobs';
+import SemesterDetails from '@/components/SemesterDetails';
 
 // Sample data for agricultural education
 const bscSemesters = [
@@ -227,6 +230,27 @@ const Index = () => {
       <main className="flex-grow">
         <HeroSection />
         
+        {/* Notifications and Updates Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Left column: Government Jobs & Updates */}
+              <div className="lg:col-span-2">
+                <GovernmentJobs />
+              </div>
+              
+              {/* Right column: Scrolling notifications */}
+              <div>
+                <h3 className="text-xl font-bold mb-4 font-poppins">Latest Updates</h3>
+                <ScrollingNotifications />
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Semester Details Section */}
+        <SemesterDetails />
+        
         {/* BSc Semesters Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -283,7 +307,7 @@ const Index = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="text-studyspark-600 font-medium mb-2 inline-block">FEATURED</span>
+              <span className="text-primary font-medium mb-2 inline-block">FEATURED</span>
               <h2 className="text-3xl font-bold font-poppins mb-4">Top Agricultural Study Notes</h2>
               <p className="text-gray-600">
                 Discover our most comprehensive agricultural study resources, selected to help you excel in your studies.
@@ -316,7 +340,7 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-on-scroll">
-                <h2 className="text-3xl font-bold font-poppins mb-6">Why Choose AgroNotes?</h2>
+                <h2 className="text-3xl font-bold font-poppins mb-6">Why Choose AGRIDOCTORS?</h2>
                 <p className="text-gray-600 mb-6">
                   Our platform focuses on delivering high-quality agricultural study materials that are well-organized, 
                   easy to understand, and specifically designed to help students excel in their academic journey.
@@ -324,8 +348,8 @@ const Index = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <div className="bg-studyspark-100 rounded-full p-2 mr-4">
-                      <BookOpen className="h-5 w-5 text-studyspark-600" />
+                    <div className="bg-primary/10 rounded-full p-2 mr-4">
+                      <BookOpen className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Comprehensive Notes</h3>
@@ -336,8 +360,8 @@ const Index = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-studyspark-100 rounded-full p-2 mr-4">
-                      <Bookmark className="h-5 w-5 text-studyspark-600" />
+                    <div className="bg-primary/10 rounded-full p-2 mr-4">
+                      <Bookmark className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Expert-Created Content</h3>
@@ -348,8 +372,8 @@ const Index = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-studyspark-100 rounded-full p-2 mr-4">
-                      <Share2 className="h-5 w-5 text-studyspark-600" />
+                    <div className="bg-primary/10 rounded-full p-2 mr-4">
+                      <Share2 className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Easy Sharing</h3>
@@ -360,14 +384,14 @@ const Index = () => {
                   </div>
                 </div>
                 
-                <Button className="mt-8 bg-studyspark-600 hover:bg-studyspark-700">
+                <Button className="mt-8 bg-primary hover:bg-primary/90">
                   Learn More About Us
                 </Button>
               </div>
               
               <div className="relative animate-on-scroll">
-                <div className="absolute -top-5 -left-5 w-24 h-24 bg-studyspark-100 rounded-lg"></div>
-                <div className="absolute -bottom-5 -right-5 w-24 h-24 bg-studyspark-100 rounded-lg"></div>
+                <div className="absolute -top-5 -left-5 w-24 h-24 bg-primary/10 rounded-lg"></div>
+                <div className="absolute -bottom-5 -right-5 w-24 h-24 bg-primary/10 rounded-lg"></div>
                 <img
                   src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=600&q=80"
                   alt="Students studying agricultural science"
@@ -383,10 +407,10 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center mb-12">
               <div>
-                <span className="text-studyspark-600 font-medium mb-2 inline-block">LATEST ADDITIONS</span>
+                <span className="text-primary font-medium mb-2 inline-block">LATEST ADDITIONS</span>
                 <h2 className="text-3xl font-bold font-poppins">Recently Added Notes</h2>
               </div>
-              <Button variant="outline" className="mt-4 md:mt-0 border-studyspark-500 text-studyspark-600 hover:bg-studyspark-50">
+              <Button variant="outline" className="mt-4 md:mt-0 border-primary text-primary hover:bg-primary/5">
                 View All Notes
               </Button>
             </div>
@@ -413,15 +437,15 @@ const Index = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-br from-studyspark-700 via-studyspark-600 to-studyspark-800 text-white">
+        <section className="py-16 bg-gradient-to-br from-primary/90 via-primary to-primary/80 text-white">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold font-poppins mb-6">Ready to Excel in Agricultural Sciences?</h2>
-              <p className="text-lg mb-8 text-studyspark-100">
+              <p className="text-lg mb-8 text-white/90">
                 Join thousands of agriculture students who are already benefiting from our comprehensive study notes.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="lg" className="bg-white text-studyspark-700 hover:bg-gray-100">
+                <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
                   Get Started Now
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
