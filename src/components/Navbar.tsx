@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Search, Book, GraduationCap, Briefcase, Bell, Video, BookOpen } from "lucide-react";
 import SearchBar from './SearchBar';
 
 const Navbar = () => {
@@ -11,8 +11,12 @@ const Navbar = () => {
 
   const navLinks = [
     { title: "Home", href: "/" },
-    { title: "BSc Notes", href: "/bsc" },
-    { title: "MSc Notes", href: "/msc" },
+    { title: "BSc Notes", href: "/bsc", icon: <BookOpen className="h-4 w-4 mr-1" /> },
+    { title: "MSc Notes", href: "/msc", icon: <Book className="h-4 w-4 mr-1" /> },
+    { title: "Exam Updates", href: "/exams", icon: <Bell className="h-4 w-4 mr-1" /> },
+    { title: "Govt. Vacancies", href: "/vacancies", icon: <Briefcase className="h-4 w-4 mr-1" /> },
+    { title: "JRF/SRF", href: "/jrf-srf", icon: <GraduationCap className="h-4 w-4 mr-1" /> },
+    { title: "Course Videos", href: "/videos", icon: <Video className="h-4 w-4 mr-1" /> },
     { title: "About", href: "/about" },
     { title: "Contact", href: "/contact" },
   ];
@@ -25,7 +29,7 @@ const Navbar = () => {
             <svg
               viewBox="0 0 24 24"
               fill="none"
-              className="h-8 w-8 text-studyspark-600"
+              className="h-8 w-8 text-primary"
               stroke="currentColor"
               strokeWidth="2"
             >
@@ -35,21 +39,22 @@ const Navbar = () => {
                 d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
               />
             </svg>
-            <span className="ml-2 text-xl font-bold font-poppins text-studyspark-700">
-              AgroNotes
+            <span className="ml-2 text-xl font-bold font-poppins text-primary">
+              AGRIDOCTORS
             </span>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-1">
-          <nav className="hidden md:flex items-center space-x-1">
+        <div className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => (
               <Link
                 key={link.title}
                 to={link.href}
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-studyspark-600 transition duration-200"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary transition duration-200 flex items-center"
               >
+                {link.icon && link.icon}
                 {link.title}
               </Link>
             ))}
@@ -59,18 +64,18 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setSearchOpen(!searchOpen)}
-              className="text-gray-700 hover:text-studyspark-600"
+              className="text-gray-700 hover:text-primary"
             >
               <Search className="h-5 w-5" />
             </Button>
-            <Button variant="default" className="bg-studyspark-600 hover:bg-studyspark-700">
+            <Button variant="default" className="bg-primary hover:bg-primary/90">
               Submit Notes
             </Button>
           </div>
         </div>
 
         {/* Mobile menu button */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <Button
             variant="ghost"
             size="icon"
@@ -111,19 +116,20 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white px-4 pt-2 pb-4 shadow-lg">
+        <div className="lg:hidden bg-white px-4 pt-2 pb-4 shadow-lg">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.title}
                 to={link.href}
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-studyspark-600 hover:bg-gray-50 rounded-md"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md flex items-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
+                {link.icon && link.icon}
                 {link.title}
               </Link>
             ))}
-            <Button variant="default" className="mt-2 w-full bg-studyspark-600 hover:bg-studyspark-700">
+            <Button variant="default" className="mt-2 w-full bg-primary hover:bg-primary/90">
               Submit Notes
             </Button>
           </nav>

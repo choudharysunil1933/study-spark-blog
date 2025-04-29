@@ -1,11 +1,12 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, Bell, Briefcase, GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-gradient-to-br from-studyspark-700 via-studyspark-600 to-studyspark-800 text-white">
+    <div className="relative bg-gradient-to-br from-primary/90 via-primary to-primary/80 text-white">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{ 
@@ -18,19 +19,37 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 pt-20 pb-24 md:py-32 relative">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-poppins mb-6 leading-tight">
-            Agricultural Study Notes for BSc & MSc Students
+            Agricultural Education & Career Resources
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-studyspark-100 font-light max-w-2xl mx-auto">
-            Comprehensive notes covering all 8 semesters of agricultural sciences to help you excel in your academic journey.
+          <p className="text-xl md:text-2xl mb-8 text-white/90 font-light max-w-2xl mx-auto">
+            Comprehensive notes, exam updates, and resources for BSc & MSc Agriculture students
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-white text-studyspark-700 hover:bg-gray-100">
-              <BookOpen className="mr-2 h-5 w-5" />
-              Browse BSc Notes
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Browse MSc Notes
-            </Button>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12">
+            <Link to="/bsc">
+              <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-white/20 transition">
+                <BookOpen className="h-8 w-8 mb-2" />
+                <span className="text-sm font-medium">BSc Notes</span>
+              </div>
+            </Link>
+            <Link to="/exams">
+              <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-white/20 transition">
+                <Bell className="h-8 w-8 mb-2" />
+                <span className="text-sm font-medium">Exam Updates</span>
+              </div>
+            </Link>
+            <Link to="/vacancies">
+              <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-white/20 transition">
+                <Briefcase className="h-8 w-8 mb-2" />
+                <span className="text-sm font-medium">Govt. Jobs</span>
+              </div>
+            </Link>
+            <Link to="/jrf-srf">
+              <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-white/20 transition">
+                <GraduationCap className="h-8 w-8 mb-2" />
+                <span className="text-sm font-medium">JRF/SRF</span>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

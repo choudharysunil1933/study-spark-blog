@@ -21,10 +21,24 @@ const App = () => (
           {/* BSc Routes */}
           <Route path="/bsc" element={<Index />} />
           <Route path="/bsc/:semesterSlug" element={<Index />} />
+          <Route path="/bsc/:semesterSlug/:subjectSlug" element={<Index />} />
           
           {/* MSc Routes */}
           <Route path="/msc" element={<Index />} />
-          <Route path="/msc/:semesterSlug" element={<Index />} />
+          <Route path="/msc/:departmentSlug" element={<Index />} />
+          <Route path="/msc/:departmentSlug/:subjectSlug" element={<Index />} />
+          
+          {/* Agricultural Information Routes */}
+          <Route path="/exams" element={<Index />} />
+          <Route path="/exams/:examId" element={<Index />} />
+          <Route path="/vacancies" element={<Index />} />
+          <Route path="/vacancies/:vacancyId" element={<Index />} />
+          <Route path="/updates" element={<Index />} />
+          <Route path="/updates/:updateId" element={<Index />} />
+          <Route path="/jrf-srf" element={<Index />} />
+          <Route path="/jrf-srf/:examId" element={<Index />} />
+          <Route path="/videos" element={<Index />} />
+          <Route path="/videos/:videoId" element={<Index />} />
           
           {/* Materials and other routes */}
           <Route path="/materials/:materialId" element={<Index />} />
