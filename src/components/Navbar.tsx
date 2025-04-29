@@ -11,8 +11,8 @@ const Navbar = () => {
 
   const navLinks = [
     { title: "Home", href: "/" },
-    { title: "Subjects", href: "/subjects" },
-    { title: "Recent Uploads", href: "/recent" },
+    { title: "BSc Notes", href: "/bsc" },
+    { title: "MSc Notes", href: "/msc" },
     { title: "About", href: "/about" },
     { title: "Contact", href: "/contact" },
   ];
@@ -36,7 +36,7 @@ const Navbar = () => {
               />
             </svg>
             <span className="ml-2 text-xl font-bold font-poppins text-studyspark-700">
-              StudySpark
+              AgroNotes
             </span>
           </Link>
         </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
               <Search className="h-5 w-5" />
             </Button>
             <Button variant="default" className="bg-studyspark-600 hover:bg-studyspark-700">
-              Submit Material
+              Submit Notes
             </Button>
           </div>
         </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button variant="default" className="mt-2 w-full bg-studyspark-600 hover:bg-studyspark-700">
-              Submit Material
+              Submit Notes
             </Button>
           </nav>
         </div>

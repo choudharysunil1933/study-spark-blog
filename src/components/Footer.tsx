@@ -23,11 +23,11 @@ const Footer = () => {
                 />
               </svg>
               <span className="ml-2 text-lg font-bold font-poppins text-gray-800">
-                StudySpark
+                AgroNotes
               </span>
             </Link>
             <p className="text-gray-600 mb-4">
-              Empowering students with high-quality study materials for academic success.
+              Empowering agriculture students with comprehensive study notes for academic excellence.
             </p>
             <div className="flex space-x-4">
               <a
@@ -70,43 +70,43 @@ const Footer = () => {
           </div>
           
           <div className="col-span-1">
-            <h3 className="font-semibold text-gray-900 mb-4">Study Materials</h3>
+            <h3 className="font-semibold text-gray-900 mb-4">BSc Notes</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/subjects/mathematics" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Mathematics</Link>
+                <Link to="/bsc/semester-1" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Semester 1</Link>
               </li>
               <li>
-                <Link to="/subjects/physics" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Physics</Link>
+                <Link to="/bsc/semester-2" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Semester 2</Link>
               </li>
               <li>
-                <Link to="/subjects/chemistry" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Chemistry</Link>
+                <Link to="/bsc/semester-3" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Semester 3</Link>
               </li>
               <li>
-                <Link to="/subjects/biology" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Biology</Link>
+                <Link to="/bsc/semester-4" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Semester 4</Link>
               </li>
               <li>
-                <Link to="/subjects/history" className="text-gray-600 hover:text-studyspark-600 transition duration-200">History</Link>
+                <Link to="/bsc/semester-5" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Semester 5-8</Link>
               </li>
             </ul>
           </div>
           
           <div className="col-span-1">
-            <h3 className="font-semibold text-gray-900 mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-gray-900 mb-4">MSc Notes</h3>
             <ul className="space-y-2">
               <li>
+                <Link to="/msc/msc-semester-1" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Semester 1</Link>
+              </li>
+              <li>
+                <Link to="/msc/msc-semester-2" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Semester 2</Link>
+              </li>
+              <li>
+                <Link to="/msc/msc-semester-3" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Semester 3</Link>
+              </li>
+              <li>
+                <Link to="/msc/msc-semester-4" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Semester 4</Link>
+              </li>
+              <li>
                 <Link to="/about" className="text-gray-600 hover:text-studyspark-600 transition duration-200">About Us</Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Contact</Link>
-              </li>
-              <li>
-                <Link to="/faq" className="text-gray-600 hover:text-studyspark-600 transition duration-200">FAQ</Link>
-              </li>
-              <li>
-                <Link to="/privacy" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link to="/terms" className="text-gray-600 hover:text-studyspark-600 transition duration-200">Terms & Conditions</Link>
               </li>
             </ul>
           </div>
@@ -114,7 +114,7 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="font-semibold text-gray-900 mb-4">Newsletter</h3>
             <p className="text-gray-600 mb-4">
-              Subscribe to get notified about new study materials and updates.
+              Subscribe to get notified about new agricultural study materials and updates.
             </p>
             <form className="flex flex-col sm:flex-row gap-2">
               <input
@@ -134,7 +134,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-200 mt-12 pt-6">
           <p className="text-gray-500 text-center text-sm">
-            © {new Date().getFullYear()} StudySpark. All rights reserved.
+            © {new Date().getFullYear()} AgroNotes. All rights reserved.
           </p>
         </div>
       </div>

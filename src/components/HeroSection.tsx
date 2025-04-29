@@ -18,18 +18,18 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 pt-20 pb-24 md:py-32 relative">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-poppins mb-6 leading-tight">
-            Unlock Your Learning Potential with StudySpark
+            Agricultural Study Notes for BSc & MSc Students
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-studyspark-100 font-light max-w-2xl mx-auto">
-            Access high-quality study materials for all subjects, created to help you excel in your academic journey.
+            Comprehensive notes covering all 8 semesters of agricultural sciences to help you excel in your academic journey.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" className="bg-white text-studyspark-700 hover:bg-gray-100">
               <BookOpen className="mr-2 h-5 w-5" />
-              Browse Materials
+              Browse BSc Notes
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Learn More
+              Browse MSc Notes
             </Button>
           </div>
         </div>
